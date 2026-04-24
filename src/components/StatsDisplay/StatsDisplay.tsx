@@ -30,7 +30,7 @@ export const StatsDisplay: React.FC<StatsDisplayProps> = ({
           flex: 1,
         }}
       >
-        <p style={{ fontSize: "12px", color: "666" }}>Characters</p>
+        <p style={{ fontSize: "12px", color: "#666" }}>Characters</p>
         <p style={{ fontSize: "24px", fontWeight: "bold" }}>
           {stats.characterCount}
         </p>

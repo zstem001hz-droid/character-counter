@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import type { CharacterCounterProps, TextStats } from "../../types/index";
 import { TextInput } from "../TextInput/TextInput";
 import { StatsDisplay } from "../StatsDisplay/StatsDisplay";
@@ -9,7 +9,6 @@ import { StatsDisplay } from "../StatsDisplay/StatsDisplay";
 export const CharacterCounter: React.FC<CharacterCounterProps> = ({
   minWords,
   maxWords,
-  targetReadingTime,
 }) => {
   // TextStats typed state - holds all three statistics
   // Initial values are all 0 - empty input has no characters words, or reading time
@@ -44,7 +43,7 @@ export const CharacterCounter: React.FC<CharacterCounterProps> = ({
   // calculates new stats and update state
   // triggers a re-render with updated stats passed to StatsDisplay
   const handleTextChange = (text: string) => {
-    const newState = calculateStats(text);
+    const newStats = calculateStats(text);
     setStats(newStats);
   };
 

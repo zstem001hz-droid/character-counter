@@ -5,7 +5,7 @@ import type { TextInputProps } from "../../types/index";
 // Reports every keystroke up to CharacterCounter via onTextChange
 export const TextInput: React.FC<TextInputProps> = ({
   onTextChange,
-  placeholder = "Start typing content here...;",
+  placeholder = "Start typing content here...",
   initialValue = "",
 }) => {
   console.log("TextInput rendered");
@@ -26,7 +26,7 @@ export const TextInput: React.FC<TextInputProps> = ({
           onTextChange(event.target.value);
         }}
         rows={6}
-        style={{ width: "100", padding: "0.5rem" }}
+        style={{ width: "100%", padding: "0.5rem" }}
       />
     </div>
   );
